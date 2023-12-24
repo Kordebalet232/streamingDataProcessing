@@ -20,9 +20,9 @@ try:
         messages = []
         while True:
             message = consumer.poll(timeout=1.0)
-            if message is None:  # если сообщение отсутствует - переходим к следующей итерации
+            if message is None:  
                 break
-            elif not message.error():  # если сообщение получено без ошибок
+            elif not message.error():  
                 value = message.value().decode("utf-8")
                 data = json.loads(value)
                 messages.append(data)

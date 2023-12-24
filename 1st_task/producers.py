@@ -25,8 +25,6 @@ for i in range(NUM_DEVICES):
     
     producers.append((f' Device {i}', measure, range,  producer))
 
-    # Генерация и отправка сообщений
-
 messages_sent = 0
 
 while True:
